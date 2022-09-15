@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "card_game",
   "resources": [
+    {"id":{"name":"Donald","path":"objects/Donald/Donald.yy",},"order":1,},
     {"id":{"name":"Ben","path":"objects/Ben/Ben.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],

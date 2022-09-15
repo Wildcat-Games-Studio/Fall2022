@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object3",
+  "name": "Pepsi",
   "spriteId": null,
   "solid": false,
   "visible": true,

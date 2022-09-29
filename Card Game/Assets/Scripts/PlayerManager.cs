@@ -5,49 +5,47 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    [Header("Player Variables")]
-    [SerializeField] int currency;
+    public int lives = 10;
+    public int Currency { get; set; }
 
     [Header("UI")]
-    [SerializeField] TMP_Text currencyText;
 
-    public static PlayerManager Instance;
+    [SerializeField]
+    TextMeshProUGUI currencyText;
+    [SerializeField]
+    TextMeshProUGUI livesCount;
 
-    public static int lives = 10;
-    public int livesTemp;
-
-    public static TextMeshPro livesCount;
-    
+    private static PlayerManager instance;
+    public static PlayerManager Instance { get { return instance; } set { } }
 
     void Awake()
     {
-        lives = livesTemp;
+        if(instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    private void Start()
+    {
+        Currency = 0;
         livesCount.text = "Lives: " + lives;
-
-        Instance = this;
-
-        currencyText.text = $"${currency}";
-
-        livesCount = GetComponentInChildren<TextMeshPro>();
+        currencyText.text = $"${Currency}";
     }
 
     public void AddToCurrency(int changeAmount)
     {
-        currency += changeAmount;
-
-        currencyText.text = $"${currency}";
+        Currency += changeAmount;
+        currencyText.text = $"${Currency}";
     }
 
-    public static void TakeDamage()
+    public void TakeDamage()
     {
         lives--;
         livesCount.text = "Lives: " + lives;
     }
-
-
-    #region Getters
-
-    public int GetCurrency() { return currency; }
-
-    #endregion
 }

@@ -506,9 +506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a04951711b63a245b02d7ad9f373166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 0
+  lives: 10
   currencyText: {fileID: 66955177}
-  livesTemp: 10
+  livesCount: {fileID: 324487859}
 --- !u!114 &653311931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distFromTarget: 0.01
-  speed: 1
+  speed: 5
 --- !u!4 &1565910833
 Transform:
   m_ObjectHideFlags: 0

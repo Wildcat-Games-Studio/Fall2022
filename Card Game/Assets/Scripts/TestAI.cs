@@ -34,12 +34,8 @@ public class TestAI : MonoBehaviour
         if (currentNode == -1)
         {
             GameObject.Destroy(gameObject);
-            PlayerManager.TakeDamage();
+            PlayerManager.Instance.TakeDamage();
         }
-
-
-
-
     }
 
 

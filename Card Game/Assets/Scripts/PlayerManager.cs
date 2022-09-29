@@ -13,11 +13,22 @@ public class PlayerManager : MonoBehaviour
 
     public static PlayerManager Instance;
 
+    public static int lives = 10;
+    public int livesTemp;
+
+    public static TextMeshPro livesCount;
+    
+
     void Awake()
     {
+        lives = livesTemp;
+        livesCount.text = "Lives: " + lives;
+
         Instance = this;
 
         currencyText.text = $"${currency}";
+
+        livesCount = GetComponentInChildren<TextMeshPro>();
     }
 
     public void AddToCurrency(int changeAmount)
@@ -26,6 +37,13 @@ public class PlayerManager : MonoBehaviour
 
         currencyText.text = $"${currency}";
     }
+
+    public static void TakeDamage()
+    {
+        lives--;
+        livesCount.text = "Lives: " + lives;
+    }
+
 
     #region Getters
 

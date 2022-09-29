@@ -30,5 +30,18 @@ public class TestAI : MonoBehaviour
                 print(currentNode);
             }
         }
+
+        if (currentNode == -1)
+        {
+            GameObject.Destroy(gameObject);
+            PlayerManager.TakeDamage();
+        }
+
+
+
+
     }
+
+
+
 }

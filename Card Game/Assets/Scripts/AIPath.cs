@@ -18,23 +18,31 @@ public class AIPath : MonoBehaviour
         }
     }
 
-    public Vector2 GetEntryNode()
+    public Vector2 GetPosition(int node)
     {
-        return points[0].position;
+        Debug.Assert(node < points.Count);
+        return points[node].position;
     }
 
-    public int GetTarget(int currentTarget, out Vector2 targetPos)
+
+    public int GetLastNode()
     {
-        if(currentTarget >= 0)
+        return points.Count - 1;
+    }
+
+    public int GetNextPosition(int targetNode, ref int currentPath, out Vector2 targetPos)
+    {
+        if (targetNode > currentPath)
         {
-            int res = currentTarget + 1;
-            if (res < points.Count)
-            {
-                targetPos = points[res].position;
-                return res;
-            }
+            ++currentPath;
+            targetPos = points[currentPath].position;
+            return currentPath;
         }
-        targetPos = Vector2.zero;
-        return -1;
+        else
+        {
+            targetPos = points[currentPath].position;
+            --currentPath;
+            return currentPath + 1;
+        }
     }
 }

@@ -6,7 +6,10 @@ public class TestAI : MonoBehaviour
 {
     AIPath path;
     Vector2 target;
-    int currentNode = 0;
+
+    int currentPath = 0;
+    int targetNode = 0;
+    int nextNode = 0;
 
     public float distFromTarget;
     public float speed;
@@ -14,30 +17,26 @@ public class TestAI : MonoBehaviour
     void Start()
     {
         path = GameObject.Find("Path").GetComponent<AIPath>();
-        target = path.GetEntryNode();
+
+        targetNode = path.GetLastNode();
+        transform.position = path.GetPosition(0);
+        path.GetNextPosition(targetNode, ref currentPath, out target);
     }
 
     void Update()
     {
-        if(currentNode != -1)
-        {
-            Vector2 dir = (target - (Vector2)transform.position).normalized;
-            transform.position += (Vector3)(dir * Time.deltaTime * speed);
+        Vector2 dir = (target - (Vector2)transform.position).normalized;
+        transform.position += (Vector3)(dir * Time.deltaTime * speed);
 
-            if(Vector2.Distance(transform.position, target) < distFromTarget)
+        if(Vector2.Distance(transform.position, target) < distFromTarget)
+        {
+            if (nextNode == path.GetLastNode())
             {
-                currentNode = path.GetTarget(currentNode, out target);
-                print(currentNode);
+                Destroy(gameObject);
+                PlayerManager.Instance.TakeDamage();
+                return;
             }
-        }
-
-        if (currentNode == -1)
-        {
-            GameObject.Destroy(gameObject);
-            PlayerManager.Instance.TakeDamage();
+            nextNode = path.GetNextPosition(targetNode, ref currentPath, out target);
         }
     }
-
-
-
 }

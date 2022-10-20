@@ -8,6 +8,8 @@ public class GenericEnemy : MonoBehaviour
     float health;
     [SerializeField]
     float speed;
+    [SerializeField]
+    float distFromTarget = 0.05f;
 
     AIPath path;
     Vector2 target;
@@ -16,7 +18,6 @@ public class GenericEnemy : MonoBehaviour
     int targetNode = 0;
     int nextNode = 0;
 
-    float distFromTarget;
 
     void Start()
     {

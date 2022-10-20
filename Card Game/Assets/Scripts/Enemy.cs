@@ -30,6 +30,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    void PathMove()
+    {
+
+    }
+
     public void DealDamage(int damage)
     {
         // Deal damage

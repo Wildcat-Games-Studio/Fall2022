@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestAI : MonoBehaviour
+public class GenericEnemy : MonoBehaviour
 {
+    [SerializeField]
+    float health;
+    [SerializeField]
+    float speed;
+
     AIPath path;
     Vector2 target;
 
@@ -11,8 +16,7 @@ public class TestAI : MonoBehaviour
     int targetNode = 0;
     int nextNode = 0;
 
-    public float distFromTarget;
-    public float speed;
+    float distFromTarget;
 
     void Start()
     {

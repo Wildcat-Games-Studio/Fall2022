@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709cdf070c2b1a24baeb720fa4afc669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distFromTarget: 0.01
+  health: 12
   speed: 5
 --- !u!4 &1565910833
 Transform:

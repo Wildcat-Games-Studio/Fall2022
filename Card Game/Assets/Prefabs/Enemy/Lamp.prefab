@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1640234623294465554}
   - component: {fileID: 5564057465558821681}
   m_Layer: 0
-  m_Name: Enemy (Lamp)
+  m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

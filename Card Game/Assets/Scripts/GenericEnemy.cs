@@ -5,9 +5,13 @@ using UnityEngine;
 public class GenericEnemy : MonoBehaviour
 {
     [SerializeField]
+    int enemyTier;
+    [SerializeField]
     float health;
     [SerializeField]
     float speed;
+    [SerializeField]
+    int deathMoney;
     [SerializeField]
     float distFromTarget = 0.05f;
 

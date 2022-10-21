@@ -7,7 +7,9 @@ public class WaveSegment
 {
     public GenericEnemy enemyToSpawn;
     public int enemyAmount;
+    [Tooltip("How much time between an enemy being sent out (seconds)")]
     public float timeBetweenEnemy;
+    [Tooltip("How much time after starting the wave to begin this segment (seconds)")] 
     public float startDelay;
 }
 

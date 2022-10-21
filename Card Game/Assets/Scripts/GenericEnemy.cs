@@ -43,6 +43,7 @@ public class GenericEnemy : MonoBehaviour
             {
                 Destroy(gameObject);
                 PlayerManager.Instance.TakeDamage();
+                WaveManager.Instance.EnemyKilled(this);
                 return;
             }
             nextNode = path.GetNextPosition(targetNode, ref currentPath, out target);

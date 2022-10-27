@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5495315319856357342}
   - component: {fileID: 5781019444402139490}
-  - component: {fileID: 7017494146763404386}
+  - component: {fileID: -6283902290215964613}
   m_Layer: 7
   m_Name: Phowns
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7017494146763404386
+--- !u!114 &-6283902290215964613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,11 +93,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4511981749073723380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a36e02c8ab8ac74f8c8f8823a52e865, type: 3}
+  m_Script: {fileID: 11500000, guid: 709cdf070c2b1a24baeb720fa4afc669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTier: 0
-  maxHealth: 3
-  damage: 0
+  health: 3
   speed: 2
   deathMoney: 25
+  distFromTarget: 0.05

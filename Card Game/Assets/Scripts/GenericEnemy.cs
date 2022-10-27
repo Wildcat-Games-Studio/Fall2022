@@ -14,8 +14,6 @@ public class GenericEnemy : MonoBehaviour
     int deathMoney;
     [SerializeField]
     float distFromTarget = 0.05f;
-    [SerializeField]
-    int deathField = 1;
 
     AIPath _path;
     Vector2 _target;
@@ -64,7 +62,7 @@ public class GenericEnemy : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
-            PlayerManager.Instance.AddToCurrency(deathField);
+            PlayerManager.Instance.AddToCurrency(deathMoney);
         }
     }
 }

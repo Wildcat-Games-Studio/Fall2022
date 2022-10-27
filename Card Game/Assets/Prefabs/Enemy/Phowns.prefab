@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5495315319856357342}
   - component: {fileID: 5781019444402139490}
   - component: {fileID: 7017494146763404386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Phowns
   m_TagString: Untagged
   m_Icon: {fileID: 0}

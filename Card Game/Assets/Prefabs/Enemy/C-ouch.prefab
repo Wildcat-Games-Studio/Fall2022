@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7638031898851695047}
   - component: {fileID: 7481299837220025148}
   - component: {fileID: 8409396092863742450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: C-ouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

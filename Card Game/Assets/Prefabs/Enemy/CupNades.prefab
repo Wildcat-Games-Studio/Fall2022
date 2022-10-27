@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2788339152797043574}
   - component: {fileID: 3300508480681778072}
   - component: {fileID: 5074212363697330498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CupNades
   m_TagString: Untagged
   m_Icon: {fileID: 0}

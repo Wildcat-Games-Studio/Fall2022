@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2146241428327816401}
   - component: {fileID: 4479533714610849327}
   - component: {fileID: 5768905588206098837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pumpking
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1013436663685460709}
   - component: {fileID: 8902452729007349948}
   - component: {fileID: 5364415855647883912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brawlcolli
   m_TagString: Untagged
   m_Icon: {fileID: 0}

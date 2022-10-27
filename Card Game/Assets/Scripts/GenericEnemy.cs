@@ -5,9 +5,13 @@ using UnityEngine;
 public class GenericEnemy : MonoBehaviour
 {
     [SerializeField]
+    int enemyTier;
+    [SerializeField]
     float health;
     [SerializeField]
     float speed;
+    [SerializeField]
+    int deathMoney;
     [SerializeField]
     float distFromTarget = 0.05f;
 
@@ -39,6 +43,7 @@ public class GenericEnemy : MonoBehaviour
             {
                 Destroy(gameObject);
                 PlayerManager.Instance.TakeDamage();
+                WaveManager.Instance.EnemyKilled(this);
                 return;
             }
             nextNode = path.GetNextPosition(targetNode, ref currentPath, out target);

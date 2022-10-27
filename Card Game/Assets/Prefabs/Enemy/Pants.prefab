@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5908674412398937189}
   - component: {fileID: 1596575107586820288}
-  - component: {fileID: 6845908524356629409}
+  - component: {fileID: 1933258619862815889}
   m_Layer: 7
   m_Name: Pants
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6845908524356629409
+--- !u!114 &1933258619862815889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,11 +93,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2541194134491996565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a36e02c8ab8ac74f8c8f8823a52e865, type: 3}
+  m_Script: {fileID: 11500000, guid: 709cdf070c2b1a24baeb720fa4afc669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTier: 0
-  maxHealth: 1
-  damage: 0
+  health: 1
   speed: 4
   deathMoney: 25
+  distFromTarget: 0.05

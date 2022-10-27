@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5765544032440403271}
   - component: {fileID: 1476589618242183572}
   - component: {fileID: 8110182813935110887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Block-rella
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8479502864603924557}
   - component: {fileID: 6076402655959758080}
   - component: {fileID: 6953195178199472078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chomputer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

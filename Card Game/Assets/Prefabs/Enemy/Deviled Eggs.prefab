@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3364014327431390596}
   - component: {fileID: 138623625648709881}
   - component: {fileID: 3006100581638108026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deviled Eggs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

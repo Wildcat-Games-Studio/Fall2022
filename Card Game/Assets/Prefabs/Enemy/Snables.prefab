@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2913657367982587947}
   - component: {fileID: 1098552858239820107}
   - component: {fileID: 4718769738439044111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Snables
   m_TagString: Untagged
   m_Icon: {fileID: 0}

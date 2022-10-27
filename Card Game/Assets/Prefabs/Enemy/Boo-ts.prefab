@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2611580188290138577}
   - component: {fileID: 908782580858252920}
   - component: {fileID: 7739215030829815397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boo-ts
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] int enemyTier;
     [SerializeField] int maxHealth;
-    [SerializeField] int damage;
     [SerializeField] float speed;
     [SerializeField] int deathMoney;
 

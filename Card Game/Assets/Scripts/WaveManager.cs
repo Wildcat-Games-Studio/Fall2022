@@ -8,7 +8,6 @@ public class WaveManager : MonoBehaviour
 {
     [Header("Waves")]
     [SerializeField] Wave[] waves;
-    [SerializeField] Vector2 enemyStartPos;
 
     [Header("UI")]
     [SerializeField] TMP_Text waveText;
@@ -16,17 +15,17 @@ public class WaveManager : MonoBehaviour
     [SerializeField] GameObject winScreen;
 
     // Current wave variables
-    [SerializeField] int currentWave = -1;
-    [SerializeField] int currentWaveSegment = 0;
-    [SerializeField] float waveTime = 0f;
-    [SerializeField] bool waveInProgress = false;
+    int currentWave = -1;
+    int currentWaveSegment = 0;
+    float waveTime = 0f;
+    bool waveInProgress = false;
 
-    [SerializeField] List<GenericEnemy> enemiesRemaining = new List<GenericEnemy>();
+    List<GenericEnemy> enemiesRemaining = new List<GenericEnemy>();
 
     // Wave segment variables
-    [SerializeField] List<WaveSegment> waveSegmentsInProgress = new List<WaveSegment>();
-    [SerializeField] List<int> waveSegmentsEnemiesRemaining = new List<int>();
-    [SerializeField] List<float> waveSegmentsCurrentTime = new List<float>();
+    List<WaveSegment> waveSegmentsInProgress = new List<WaveSegment>();
+    List<int> waveSegmentsEnemiesRemaining = new List<int>();
+    List<float> waveSegmentsCurrentTime = new List<float>();
 
     private static WaveManager instance;
     public static WaveManager Instance { get { return instance; } set { } }
@@ -108,7 +107,7 @@ public class WaveManager : MonoBehaviour
             return false;
 
         // Spawn new enemy
-        GenericEnemy enemySpawned = Instantiate(waveSegmentsInProgress[segment].enemyToSpawn, enemyStartPos, Quaternion.identity);
+        GenericEnemy enemySpawned = Instantiate(waveSegmentsInProgress[segment].enemyToSpawn, transform);
         enemiesRemaining.Add(enemySpawned);
         waveSegmentsEnemiesRemaining[segment]--;
         waveSegmentsCurrentTime[segment] = waveTime;

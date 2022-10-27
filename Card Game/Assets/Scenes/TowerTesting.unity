@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 677410099}
   - component: {fileID: 677410098}
   - component: {fileID: 677410100}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677410096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.06, y: -1.84, z: 0}
+  m_LocalPosition: {x: -6.14, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -686,7 +686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b84b85d2c893e145be36b2b5af7ece8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: fdf6dfd6675c48747a7c35e88e119fa8, type: 2}
+  data: {fileID: 11400000, guid: cb7ac6b04d91611428ee8b456310be15, type: 2}
+  _shot: {fileID: 300208921697442173, guid: 033cb493b8e24e847ae021fcd73c62cd, type: 3}
 --- !u!1 &748880751
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +872,7 @@ GameObject:
   - component: {fileID: 1565910834}
   - component: {fileID: 1565910837}
   - component: {fileID: 1565910836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -891,8 +892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 12
-  speed: 5
+  speed: 3
   distFromTarget: 0.05
+  deathField: 1
 --- !u!4 &1565910833
 Transform:
   m_ObjectHideFlags: 0

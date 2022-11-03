@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de273f188a5d1af4ca391db997e43fc9, type: 3}
-  m_Name: Test Wave 2
+  m_Name: Wave 1
   m_EditorClassIdentifier: 
   waveSegments:
-  - enemyToSpawn: {fileID: 6255612457042886325, guid: 8426a92b34674654fb26dae63fd78254, type: 3}
-    enemyAmount: 20
-    timeBetweenEnemy: 0.1
+  - enemyToSpawn: {fileID: -7300724548769576556, guid: c63565fdc0677b847af7596c355f0b2d, type: 3}
+    enemyAmount: 5
+    timeBetweenEnemy: 2
     startDelay: 0
-  - enemyToSpawn: {fileID: 6255612457042886325, guid: 3f200a3c4570511448ba1ceb8a54eb52, type: 3}
-    enemyAmount: 10
-    timeBetweenEnemy: 0.2
-    startDelay: 2.5

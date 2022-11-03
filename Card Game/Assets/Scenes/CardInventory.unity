@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 77659289}
   - component: {fileID: 77659288}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Hand Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 1636284808}
   - component: {fileID: 1636284807}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Deck Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

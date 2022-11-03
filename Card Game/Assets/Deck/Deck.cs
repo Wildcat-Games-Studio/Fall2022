@@ -8,7 +8,10 @@ public class Deck : MonoBehaviour
     public  Cards[] deck = new Cards[25];
     private Cards currentCard;
 
-    // Start is called before the first frame update
+    public GameObject handPanel;
+    private Cards[] hand = new Cards[5];
+    private int prev;
+     // Start is called before the first frame update
     void Start()
     {
         
@@ -22,6 +25,23 @@ public class Deck : MonoBehaviour
 
     public void DrawCard()
     {
-        
+        int random = Random.Range(0, deck.Length);
+
+
+    }
+
+    private void DrawHand()
+    {
+       for(int i = 0; i < hand.Length; i ++)
+        {
+            int random = Random.Range(0, deck.Length);
+
+            while(prev == random)
+            {
+                random = Random.Range(0, deck.Length);
+            }
+            prev = random;
+            hand[i] = deck[random];
+        }
     }
 }

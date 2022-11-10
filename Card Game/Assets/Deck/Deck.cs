@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    private int deckLimit = 25;
     public  Cards[] deck = new Cards[25];
     private Cards currentCard;
 
     public GameObject handPanel;
     private Cards[] hand = new Cards[5];
-    private int prev;
+    private int cardI;
+
      // Start is called before the first frame update
     void Start()
     {
-        
+        shuffle(deck, deck.Length);
     }
 
     // Update is called once per frame
@@ -25,23 +25,46 @@ public class Deck : MonoBehaviour
 
     public void DrawCard()
     {
-        int random = Random.Range(0, deck.Length);
+        for(int i = 0; i < hand.Length; i++)
+        {
+            if(hand[i] == null)
+            {
+                hand[i] = deck[cardI];
+                cardI++;
+                break;
+            }
+        }
 
-
+        if (cardI >= deck.Length)
+        {
+            shuffle(deck, deck.Length);
+        }
     }
 
     private void DrawHand()
     {
        for(int i = 0; i < hand.Length; i ++)
         {
-            int random = Random.Range(0, deck.Length);
+            hand[i] = deck[cardI];
+            cardI++;
+        }
+    }
 
-            while(prev == random)
-            {
-                random = Random.Range(0, deck.Length);
-            }
-            prev = random;
-            hand[i] = deck[random];
+    public void shuffle(Cards[] card, int n)
+    {
+        int rand;
+
+        cardI = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            rand = Random.Range(i, n);
+
+            //swapping the elements
+            Cards temp = card[rand];
+            card[rand] = card[i];
+            card[i] = temp;
+
         }
     }
 }

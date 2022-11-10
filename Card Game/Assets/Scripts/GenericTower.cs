@@ -10,6 +10,8 @@ public class GenericTower : MonoBehaviour
     private GameObject _shot;
 
     float _next_shot_valid = 0.0f;
+    int current_frame = 0;
+
     private CircleCollider2D _col;
     private SpriteRenderer _spriteRenderer;
 
@@ -21,9 +23,12 @@ public class GenericTower : MonoBehaviour
 
     void Start()
     {
+        Debug.Assert(data.sprite_frames.Length > 0);
+
         _col.radius = data.radius;
         _col.isTrigger = true;
-        _spriteRenderer.sprite = data.sprite;
+
+        StartCoroutine(Animate());
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -43,5 +48,16 @@ public class GenericTower : MonoBehaviour
         spawned.GetComponent<Rigidbody2D>().velocity = dir * 20.0f;
         spawned.GetComponent<Shot>().owner = this;
         Destroy(spawned, 10);
+    }
+
+    IEnumerator Animate()
+    {
+        for(;;)
+        {
+            _spriteRenderer.sprite = data.sprite_frames[current_frame];
+            current_frame = (current_frame + 1) % data.sprite_frames.Length;
+
+            yield return new WaitForSeconds(1.0f / data.frame_rate);
+        }
     }
 }

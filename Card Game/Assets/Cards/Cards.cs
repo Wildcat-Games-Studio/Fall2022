@@ -5,7 +5,9 @@ using UnityEngine;
 public class Cards : ScriptableObject
 {
     public string cardName;
-    public Sprite sprite;
+    public Sprite[] sprite_frames;
+    [Range(0.1f, 100.0f)]
+    public float frame_rate;
     public int cost;
     public int damage;
     public int attackSpeed;

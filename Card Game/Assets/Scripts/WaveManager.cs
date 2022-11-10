@@ -7,7 +7,13 @@ using UnityEngine.UI;
 public class WaveManager : MonoBehaviour
 {
     [Header("Waves")]
-    [SerializeField] Wave[] waves;
+    [SerializeField] List<Wave> waves;
+    [SerializeField] Wave waveTemplate;
+
+    [Header("Wave Generation")]
+    [SerializeField] int numWaves;
+    [SerializeField] bool randomizeSeed;
+    [SerializeField] int fixedSeed;
 
     [Header("UI")]
     [SerializeField] TMP_Text waveText;
@@ -15,7 +21,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] GameObject winScreen;
 
     // Current wave variables
-    int currentWave = -1;
+    [SerializeField] int currentWave = -1;
     int currentWaveSegment = 0;
     float waveTime = 0f;
     bool waveInProgress = false;
@@ -45,10 +51,29 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         waveText.text = "Wave: 1";
+
+        if (randomizeSeed)
+            Random.InitState(fixedSeed);
+
+        for (int i = waves.Count + 1; i <= numWaves; i++)
+        {
+            waves.Add(GenerateWave(i));
+        }
     }
 
     void Update()
     {
+        // Speed up (For debug purposes)
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+                Time.timeScale = 10f;
+            else
+                Time.timeScale = 5f;
+        }
+        else
+            Time.timeScale = 1f;
+
         // Check if wave is in progress
         if (!waveInProgress)
             return;
@@ -68,7 +93,7 @@ public class WaveManager : MonoBehaviour
                 waveText.text = $"Wave: {currentWave + 2}";
 
                 // Check if all waves have been complete
-                if (currentWave + 1 >= waves.Length)
+                if (currentWave + 1 >= waves.Count)
                 {
                     // Win screen
                     winScreen.SetActive(true);
@@ -102,6 +127,16 @@ public class WaveManager : MonoBehaviour
 
     bool RunSegment(int segment)
     {
+        // Check if segment is empty
+        if (waveSegmentsInProgress[segment].enemyAmount == 0)
+        {
+            waveSegmentsInProgress.RemoveAt(segment);
+            waveSegmentsEnemiesRemaining.RemoveAt(segment);
+            waveSegmentsCurrentTime.RemoveAt(segment);
+
+            return true;
+        }
+
         // Check if spawn delay is up
         if (waveTime - waveSegmentsCurrentTime[segment] < waveSegmentsInProgress[segment].timeBetweenEnemy)
             return false;
@@ -128,7 +163,7 @@ public class WaveManager : MonoBehaviour
     public void StartWave()
     {
         // Check if wave is in progress
-        if (waveInProgress || currentWave + 1 >= waves.Length)
+        if (waveInProgress || currentWave + 1 >= waves.Count)
             return;
 
         // Go to next wave
@@ -150,5 +185,36 @@ public class WaveManager : MonoBehaviour
     public void EnemyKilled(GenericEnemy enemyKilled)
     {
         enemiesRemaining.Remove(enemyKilled);
+    }
+
+    Wave GenerateWave(int score)
+    {
+        int numEnemies = score * 5;
+
+        Wave wave = new Wave(waveTemplate);
+
+        for (int i = 0; i < numEnemies; i++)
+        {
+            wave.waveSegments[Random.Range(0, wave.waveSegments.Length)].enemyAmount++;
+        }
+
+        for (int i = 0; i < wave.waveSegments.Length; i++)
+        {
+            float spaceBetweenEnemy = Random.Range(0.5f, 5f);
+            float spacing = 1f / wave.waveSegments[i].enemyToSpawn.GetSpeed() * spaceBetweenEnemy;
+            wave.waveSegments[i].timeBetweenEnemy = spacing;
+
+            if (i == 0)
+                continue;
+
+            float currentWaveTime = wave.waveSegments[i - 1].startDelay;
+            float maxDelay = currentWaveTime + wave.waveSegments[i - 1].enemyAmount * wave.waveSegments[i - 1].timeBetweenEnemy;
+            if (Random.Range(0, 1f) <= 0.1f)
+                wave.waveSegments[i].startDelay = Random.Range(currentWaveTime, maxDelay);
+            else
+                wave.waveSegments[i].startDelay = maxDelay;
+        }
+
+        return wave;
     }
 }

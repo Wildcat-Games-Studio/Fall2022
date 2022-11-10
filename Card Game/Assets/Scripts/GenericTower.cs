@@ -11,16 +11,19 @@ public class GenericTower : MonoBehaviour
 
     float _next_shot_valid = 0.0f;
     private CircleCollider2D _col;
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _col = gameObject.AddComponent<CircleCollider2D>();
+        _spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
     }
 
     void Start()
     {
         _col.radius = data.radius;
         _col.isTrigger = true;
+        _spriteRenderer.sprite = data.sprite;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

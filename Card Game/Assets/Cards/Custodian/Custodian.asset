@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Custodian
   m_EditorClassIdentifier: 
   cardName: Custodian
+  sprite: {fileID: 21300000, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
   cost: 75
   damage: 1
   attackSpeed: 2

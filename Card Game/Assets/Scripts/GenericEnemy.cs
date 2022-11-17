@@ -50,13 +50,7 @@ public class GenericEnemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
-        TakeDamage(collision.gameObject.GetComponent<Shot>().owner.data.damage);
-    }
-
-    void TakeDamage(float val)
+    public void TakeDamage(float val)
     {
         health -= val;
         if(health <= 0)
@@ -69,5 +63,10 @@ public class GenericEnemy : MonoBehaviour
     public float GetSpeed()
     {
         return speed;
+    }
+
+    private void OnDestroy()
+    {
+        WaveManager.Instance.EnemyKilled(this);
     }
 }

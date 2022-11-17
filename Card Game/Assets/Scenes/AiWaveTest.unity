@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - {fileID: 11400000, guid: 4a838b8ce24db8f44be686358377e3de, type: 2}
   - {fileID: 11400000, guid: a285a042b5ddbfc43b18977b452a41cb, type: 2}
   - {fileID: 11400000, guid: 0b2dac7ba6312be458020aae2ac849f4, type: 2}
   - {fileID: 11400000, guid: 7b66fbfe9a202d042b4225d22d98f5cb, type: 2}
@@ -648,15 +649,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f929d4432a42e314a831ce6460bb099f, type: 2}
   - {fileID: 11400000, guid: b89df4d31ddcfd147bfaa98756cf2f49, type: 2}
   - {fileID: 11400000, guid: a38509446633c5b4b839d3d04c427e09, type: 2}
-  - {fileID: 11400000, guid: 4a838b8ce24db8f44be686358377e3de, type: 2}
-  waveTemplate: {fileID: 11400000, guid: 244d4f467e33fc541b563f8175d16ca0, type: 2}
-  numWaves: 1000
-  randomizeSeed: 0
-  fixedSeed: 0
   waveText: {fileID: 1806957675}
   nextWaveButton: {fileID: 866885076}
   winScreen: {fileID: 1537688944}
-  currentWave: 11
 --- !u!4 &359882054
 Transform:
   m_ObjectHideFlags: 0

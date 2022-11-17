@@ -123,6 +123,16 @@ public class WaveManager : MonoBehaviour
         {
             i = RunSegment(i) ? i - 1 : i;
         }
+
+        // Debug
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Time.timeScale = 10f;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     bool RunSegment(int segment)

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Card Game/Assets/Waves/Template Wave.asset.meta
 guid: 244d4f467e33fc541b563f8175d16ca0
+========
+guid: a285a042b5ddbfc43b18977b452a41cb
+>>>>>>>> main:Card Game/Assets/Waves/Wave 1.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

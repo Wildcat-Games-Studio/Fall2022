@@ -200,7 +200,8 @@ public class WaveManager : MonoBehaviour
 
         for (int i = 0; i < wave.waveSegments.Length; i++)
         {
-            float spaceBetweenEnemy = Random.Range(0.5f, 5f);
+            Debug.Log($"i: {i}, Wave Segment Length: {wave.waveSegments.Length}. Max Spacing: {5f - ((wave.waveSegments.Length - i) * .3f)}");
+            float spaceBetweenEnemy = Random.Range(0.5f, 5f - ((wave.waveSegments.Length - i) * .33f));
             float spacing = 1f / wave.waveSegments[i].enemyToSpawn.GetSpeed() * spaceBetweenEnemy;
             wave.waveSegments[i].timeBetweenEnemy = spacing;
 

@@ -656,6 +656,7 @@ MonoBehaviour:
   waveText: {fileID: 1806957675}
   nextWaveButton: {fileID: 866885076}
   winScreen: {fileID: 1537688944}
+  currentWave: 11
 --- !u!4 &359882054
 Transform:
   m_ObjectHideFlags: 0

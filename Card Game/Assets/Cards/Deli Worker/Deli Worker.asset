@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Deli Worker
   m_EditorClassIdentifier: 
   cardName: Deli Worker
+  sprite_frames:
+  - {fileID: -3318583585889705142, guid: e2a45ccd653c8364ba34ed95c85a5a0d, type: 3}
+  - {fileID: 6867901980214537083, guid: e2a45ccd653c8364ba34ed95c85a5a0d, type: 3}
+  - {fileID: -1600382148835286519, guid: e2a45ccd653c8364ba34ed95c85a5a0d, type: 3}
+  - {fileID: -6518067582328268258, guid: e2a45ccd653c8364ba34ed95c85a5a0d, type: 3}
+  - {fileID: 6401446840939712565, guid: e2a45ccd653c8364ba34ed95c85a5a0d, type: 3}
+  frame_rate: 20
   cost: 175
   damage: 3
   attackSpeed: 3

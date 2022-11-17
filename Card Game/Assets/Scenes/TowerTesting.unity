@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testTower: {fileID: 5524213485846831075, guid: 13e8c36654693034cb8e9e1ddc128126, type: 3}
-  testCard: {fileID: 11400000, guid: 4367c25cc41f90d41a09848a6a8b903e, type: 2}
+  testCard: {fileID: 11400000, guid: 6dc71d13f8fd0a74bad61cbaae3091e3, type: 2}
   gridSize: 1
   placeMask:
     serializedVersion: 2

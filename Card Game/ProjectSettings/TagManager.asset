@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PathNode
   - Enemy
+  - PathCollision
+  - Tower
   layers:
   - Default
   - TransparentFX

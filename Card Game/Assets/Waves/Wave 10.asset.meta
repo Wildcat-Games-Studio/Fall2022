@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Card Game/Assets/Waves/Wave 1.asset.meta
+guid: a285a042b5ddbfc43b18977b452a41cb
+========
 guid: a38509446633c5b4b839d3d04c427e09
+>>>>>>>> main:Card Game/Assets/Waves/Wave 10.asset.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 11400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

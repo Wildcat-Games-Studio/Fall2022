@@ -65,4 +65,9 @@ public class GenericEnemy : MonoBehaviour
             PlayerManager.Instance.AddToCurrency(deathMoney);
         }
     }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
 }

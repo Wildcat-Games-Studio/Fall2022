@@ -638,21 +638,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 298179f6fe026d04c8aa196603dd3add, type: 2}
-  - {fileID: 11400000, guid: 4b919c82ebc76084491bb120bf0c4317, type: 2}
-  - {fileID: 11400000, guid: 13963cb19e941b34d8c4ae81138c50e2, type: 2}
-  enemyStartPos: {x: -11.86, y: 3.43}
+  - {fileID: 11400000, guid: 4a838b8ce24db8f44be686358377e3de, type: 2}
+  - {fileID: 11400000, guid: a285a042b5ddbfc43b18977b452a41cb, type: 2}
+  - {fileID: 11400000, guid: 0b2dac7ba6312be458020aae2ac849f4, type: 2}
+  - {fileID: 11400000, guid: 7b66fbfe9a202d042b4225d22d98f5cb, type: 2}
+  - {fileID: 11400000, guid: f9ba49ffae88f6944ae86cb10058b39b, type: 2}
+  - {fileID: 11400000, guid: 75caf519bfa44a2489fa02c267621391, type: 2}
+  - {fileID: 11400000, guid: e8d4fa7bbe3509b40915c3b986a6bb6b, type: 2}
+  - {fileID: 11400000, guid: fc9ebee1ea3a2f5408ef1256a807fd66, type: 2}
+  - {fileID: 11400000, guid: f929d4432a42e314a831ce6460bb099f, type: 2}
+  - {fileID: 11400000, guid: b89df4d31ddcfd147bfaa98756cf2f49, type: 2}
+  - {fileID: 11400000, guid: a38509446633c5b4b839d3d04c427e09, type: 2}
   waveText: {fileID: 1806957675}
   nextWaveButton: {fileID: 866885076}
   winScreen: {fileID: 1537688944}
-  currentWave: -1
-  currentWaveSegment: 0
-  waveTime: 0
-  waveInProgress: 0
-  enemiesRemaining: []
-  waveSegmentsInProgress: []
-  waveSegmentsEnemiesRemaining: 
-  waveSegmentsCurrentTime: []
 --- !u!4 &359882054
 Transform:
   m_ObjectHideFlags: 0

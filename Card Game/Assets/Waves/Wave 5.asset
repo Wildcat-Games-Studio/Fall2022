@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de273f188a5d1af4ca391db997e43fc9, type: 3}
+  m_Name: Wave 5
+  m_EditorClassIdentifier: 
+  waveSegments:
+  - enemyToSpawn: {fileID: -7300724548769576556, guid: c63565fdc0677b847af7596c355f0b2d, type: 3}
+    enemyAmount: 3
+    timeBetweenEnemy: 1
+    startDelay: 0
+  - enemyToSpawn: {fileID: 9221310452211221814, guid: 8d9c1228b506ade44afa355b554b1c68, type: 3}
+    enemyAmount: 3
+    timeBetweenEnemy: 0.8
+    startDelay: 3
+  - enemyToSpawn: {fileID: 5516108673667914364, guid: 21993909d4fc49642b1022a7e481e41c, type: 3}
+    enemyAmount: 4
+    timeBetweenEnemy: 0.8
+    startDelay: 5.4
+  - enemyToSpawn: {fileID: -77973612354331999, guid: ac46aea1fbb92b24980ceecbf6b205c3, type: 3}
+    enemyAmount: 5
+    timeBetweenEnemy: 0.9
+    startDelay: 8.6
+  - enemyToSpawn: {fileID: 3647490966896453040, guid: 5e126af401ca8c849ba53a43d75e9979, type: 3}
+    enemyAmount: 5
+    timeBetweenEnemy: 1
+    startDelay: 13.1
+  - enemyToSpawn: {fileID: 4479613644118925456, guid: a73506a098268834ab14b768ce20ac5f, type: 3}
+    enemyAmount: 5
+    timeBetweenEnemy: 1
+    startDelay: 19

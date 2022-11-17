@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: Custodian
   m_EditorClassIdentifier: 
   cardName: Custodian
+  sprite_frames:
+  - {fileID: 4360481405281892584, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -2959003600525820350, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -7301975451214978028, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -2611106034940118547, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: 8821798635543395544, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -8946110031057435486, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: 3388214253450605044, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: 7778831359741041172, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -2080905735493090083, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -841960041712689399, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  - {fileID: -5898355332398324881, guid: 7119979f653a0eb448d344cef8975b10, type: 3}
+  frame_rate: 20
   cost: 75
   damage: 1
   attackSpeed: 2

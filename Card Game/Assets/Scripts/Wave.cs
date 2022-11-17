@@ -17,4 +17,23 @@ public class WaveSegment
 public class Wave : ScriptableObject
 {
     public WaveSegment[] waveSegments;
+
+    public Wave()
+    {
+        waveSegments = new WaveSegment[0];
+    }
+
+    public Wave(Wave template)
+    {
+        waveSegments = new WaveSegment[template.waveSegments.Length];
+        for (int i = 0; i < waveSegments.Length; i++)
+        {
+            waveSegments[i] = new WaveSegment();
+
+            waveSegments[i].enemyToSpawn = template.waveSegments[i].enemyToSpawn;
+            waveSegments[i].enemyAmount = template.waveSegments[i].enemyAmount;
+            waveSegments[i].timeBetweenEnemy = template.waveSegments[i].timeBetweenEnemy;
+            waveSegments[i].startDelay = template.waveSegments[i].startDelay;
+        }
+    }
 }
